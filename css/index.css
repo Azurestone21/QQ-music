@@ -1,0 +1,563 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+html,body {
+    width: 100%;
+    height: 100%;
+    font-size: 14px;
+
+}
+/*-------头部-------*/
+.header {
+    width: 100%;
+    height: 45px;
+    /*background-color: #059cff;*/
+}
+.header .logo {
+    float: left;
+    margin-left: 20px;
+    margin-top: 5px;
+    opacity: 0.5;
+}
+.header .logo:hover {
+    opacity: 1;
+}
+.header .logo a {
+    background: url("../images/player_logo.png") no-repeat 0 0;
+    display: inline-block;
+    width: 78px;
+    height: 21px;
+}
+.header .register {
+    float: right;
+    list-style: none;
+    line-height: 45px;
+}
+.register li {
+    float: left;
+    margin-right: 20px;
+    color: #ffffff;
+    opacity: 0.5;
+}
+.register li:hover {
+    opacity: 1;
+}
+
+/*-------内容-------*/
+.context {
+    width: 100%;
+    height: 576px;
+    /*background-color: cadetblue;*/
+}
+.context .content_in {
+    width: 1300px;
+    height: 100%;
+    /*background-color: burlywood;*/
+    margin: 0 auto;
+}
+/*左边区域*/
+.content_in .context_left {
+    width: 900px;
+    height: 100%;
+    /*background-color: dimgrey;*/
+    float: left;
+}
+
+/*收藏。。。按钮*/
+.context_left .content_toolbar {
+    width: 100%;
+    height: 40px;
+    /*background-color: #406937;*/
+}
+.content_toolbar span {
+    display: inline-block;
+    width: 122px;
+    height: 100%;
+    line-height: 40px;
+    text-align: center;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin-right: 5px;
+    opacity: 0.5;
+}
+.content_toolbar span i {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    background: url("../images/icon_sprite.png") no-repeat 0 0;
+    margin-right: 10px;
+    vertical-align: -5px;
+}
+.content_toolbar span:nth-child(1) i {
+    background-position: -60px -20px;
+}
+.content_toolbar span:nth-child(2) i{
+    background-position: -20px -20px;
+}
+.content_toolbar span:nth-child(3) i{
+    background-position: -40px -240px;
+}
+.content_toolbar span:nth-child(4) i{
+    background-position: -100px -20px;
+}
+.content_toolbar span:nth-child(5) i{
+    background-position: -40px -300px;
+}
+.content_toolbar span:hover {
+    opacity: 1;
+}
+
+/*歌曲列表*/
+.content_list {
+    width: 100%;
+    height: 516px;
+    margin-top: 20px;
+    /*background-color: darksalmon;*/
+    overflow: auto;
+}
+.content_list ul {
+    list-style: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.36);
+}
+.content_list .list_title {
+    width: 100%;
+    height: 40px;
+    /*background-color: steelblue;*/
+    color: #ffffff;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.36);
+}
+.content_list .list_music {
+    width: 100%;
+    height: 40px;
+    /*background-color: steelblue;*/
+    color: #ffffff;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.36);
+}
+/*注意：这里的li不能用class指代*/
+.content_list li div {
+    float: left;
+    line-height: 40px;
+    user-select: none;
+    color: rgba(255,255,255,0.5);
+}
+.list_title .list_check {
+    width: 40px;
+    height: 100%;
+    /*background-color: #555555;*/
+    text-align: center;
+}
+.list_music .list_check {
+    width: 40px;
+    height: 100%;
+    /*background-color: #555555;*/
+    text-align: center;
+}
+/*复选框*/
+.content_list .list_check i{
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    border: 1px solid #fff;
+    opacity: 0.5;
+}
+/*复选框 打钩*/
+.content_list .list_checked i{
+    background: transparent;
+    background: url("../images/icon_sprite.png") no-repeat -60px -80px;
+    opacity: 1;
+}
+.content_list .list_number {
+    width: 15px;
+    height: 100%;
+    margin-left: 5px;
+    margin-right: 5px;
+    /*background-color: chocolate;*/
+    text-align: center;
+    color: #ffffff;
+    opacity: 0.5;
+}
+.content_list .list_number2 {
+    color: transparent !important;
+    background: url("../images/wave.gif") no-repeat 0 center;
+    box-sizing: border-box;
+    padding: 0px;
+    opacity: 1;
+    text-align: left;
+    /*background-color: #31c27c;*/
+}
+/*歌名*/
+.content_list .list_name {
+    width: 50%;
+    height: 100%;
+}
+/*每首歌曲的小菜单*/
+.list_name .list_menu {
+    float: right;
+    padding-right: 10px;
+    margin-top: 2px;
+    display: none;
+    box-sizing: border-box;
+}
+.list_menu a {
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    background: url("../images/icon_list_menu.png") no-repeat 0 0;
+    opacity: 0.5;
+}
+.list_menu a:hover {
+    opacity: 1;
+}
+.list_menu a:nth-child(1){
+    background-position: -120px 0;
+    /*background-position: -80px -200px;*/
+}
+.list_menu a:nth-child(2){
+    background-position: -120px -80px;
+}
+.list_menu a:nth-child(3){
+    background-position: -120px -120px;
+}
+.list_menu a:nth-child(4){
+    background-position: -120px -40px;
+}
+/*
+注意：这里的.list_name 一定要加上
+否则后面加了!important;也没有效果
+原理不明
+*/
+.list_name .list_menu .list_menu_play2 {
+    background-position: -80px -200px;
+}
+/*歌手*/
+.content_list .list_singer {
+    width: 180px;
+    height: 100%;
+    /*background-color: #69334b;*/
+    color: rgba(255,255,255,0.5);
+}
+.content_list .list_singer:hover {
+    color: #ffffff;
+}
+
+/*时长-删除*/
+.list_time {
+    color: rgba(255,255,255,0.5);
+}
+.list_time a {
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    background: url("../images/icon_list_menu.png") no-repeat -120px -160px;
+    opacity: 0.5;
+    float: left;
+    display: none;
+}
+.list_time a:hover {
+    opacity: 1;
+}
+
+/*右边区域*/
+.content_in .context_right {
+    width: 400px;
+    height: 100%;
+    /*background-color: #69334b;*/
+    float: left;
+    user-select: none;
+}
+.context_right .song_info {
+    text-align: center;
+    /*background-color: #a08696;*/
+    line-height: 30px;
+    color: rgba(255,255,255,0.5);
+}
+
+/*专辑图片*/
+.context_right .song_info .song_info_pic {
+    display: inline-block;
+    width: 201px;
+    height: 180px;
+    background: url("../images/album_cover_player.png");
+    text-align: left;
+}
+.song_info_pic img {
+    width: 180px;
+    height: 180px;
+}
+
+/*歌手、歌曲信息*/
+.song_info div a {
+    text-decoration: none;
+    color: #ffffff;
+    opacity: 0.5;
+}
+.song_info div a:hover {
+    opacity: 1;
+}
+
+/*歌词*/
+.song_info .song_lyric_container {
+    width: 100%;
+    height: 150px;
+    /*background-color: #a08696;*/
+    margin-top: 50px;
+    overflow: hidden;
+}
+.song_lyric_container .song_lyric {
+    text-align: center;
+    /*background-color: #a08696;*/
+    list-style: none;
+}
+.content_right .song_lyric li{
+    list-style: none;
+    line-height: 30px;
+    font-weight: bold;
+    color: rgba(255,255,255,0.5);
+}
+/*歌词第一句变色*/
+.song_info .song_lyric .cur{
+    color: #31c27c;
+}
+
+/*-------尾部-------*/
+.footer {
+    width: 100%;
+    height: 80px;
+    /*background-color: darkturquoise;*/
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.footer .footer_in {
+    width: 1300px;
+    height: 80px;
+    /*background-color: cornflowerblue;*/
+    margin: 0 auto;
+    padding-top: 15px;
+    box-sizing: border-box;
+    user-select: none;
+}
+.footer_in a {
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    background: url("../images/player.png") no-repeat 0 0;
+    margin-right: 30px;
+    opacity: 0.8;
+}
+.footer_in a:hover {
+    opacity: 1;
+}
+
+/*上一首*/
+.footer_in .music_pre{
+    width: 19px;
+    height: 20px;
+    background-position: 0 -30px;
+}
+/*开始*/
+.footer_in .music_play{
+    width: 21px;
+    height: 29px;
+    background-position: 0 0;
+    vertical-align: -5px;
+}
+/*暂停*/
+.footer_in .music_play2{
+    background-position: -30px 0;
+}
+/*下一首*/
+.footer_in .music_next{
+    width: 19px;
+    height: 20px;
+    background-position: 0 -52px;
+}
+
+/*歌曲进度设置*/
+.footer_in .music_progress_info {
+    display: inline-block;
+    width: 740px;
+    height: 35px;
+    /*background-color: #555555;*/
+    position: relative;
+    top: 5px;
+    margin-right: 20px;
+}
+
+.music_progress_info .music_progress_top{
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    color: #fff;
+    /*background-color: #31c27c;*/
+}
+/*歌手*/
+.music_progress_top .music_progress_name {
+    float: left;
+}
+/*歌曲已进行时间*/
+.music_progress_top .music_progress_time {
+    float: right;
+}
+
+/*进度条*/
+.music_progress_info .music_progress_bar {
+    width: 100%;
+    height: 4px;
+    background: rgba(255,255,255,0.5);
+    margin-top: 5px;
+    position: relative;
+}
+.music_progress_bar .music_progress_line {
+    width: 0;
+    height: 100%;
+    background: #ffffff;
+    margin-top: 5px;
+}
+.music_progress_line .music_progress_dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    position: absolute;
+    top: -5px;
+    left: 0;
+}
+
+/*歌曲循环方式*/
+/*列表循环*/
+.footer_in .music_mode{
+    width: 26px;
+    height: 25px;
+    background-position: 0 -205px;
+    margin-right: 15px;
+}
+/*列表循序*/
+.footer_in .music_mode2{
+    width: 23px;
+    height: 20px;
+    background-position: 0 -260px;
+}
+/*随机播放*/
+.footer_in .music_mode3{
+    width: 25px;
+    height: 19px;
+    background-position: 0 -74px;
+}
+/*单手循环*/
+.footer_in .music_mode4{
+    width: 26px;
+    height: 25px;
+    background-position: 0 -232px
+}
+
+/*收藏*/
+.footer_in .music_fav{
+    width: 24px;
+    height: 21px;
+    background-position: 0 -96px;
+    margin-right: 15px;
+}
+
+/*已收藏*/
+.footer_in .music_fav2{
+    background-position: -30px -96px;
+    margin-right: 15px;
+}
+
+/*下载*/
+.footer_in .music_down{
+    width: 22px;
+    height: 21px;
+    background-position: 0 -120px;
+    margin-right: 15px;
+}
+
+/*评论*/
+.footer_in .music_comment{
+    width: 24px;
+    height: 24px;
+    background-position: 0 -400px;
+    margin-right: 15px;
+}
+
+/*纯净*/
+.footer_in .music_only{
+    width: 74px;
+    height: 27px;
+    background-position: 0 -281px;
+    margin-right: 20px;
+}
+.footer_in .music_only2{
+    background-position: 0 -310px;
+}
+
+/*声音大小设置*/
+.footer_in .music_voice_info {
+    display: inline-block;
+    width: 60px;
+    height: 25px;
+    /*background-color: #31c27c;*/
+    position: relative;
+}
+/*音量开启*/
+.music_voice_info .music_voice_icon {
+    width: 26px;
+    height: 21px;
+    background-position: 0 -144px;
+}
+/*静音*/
+.music_voice_info .music_voice_icon2 {
+    background-position: 0 -182px;
+}
+/*进度条*/
+.music_voice_info .music_voice_bar {
+    width: 60px;
+    height: 4px;
+    background: rgba(255,255,255,0.5);
+    position: absolute;
+    top: 7px;
+    left: 30px;
+}
+.music_voice_bar .music_voice_line {
+    width: 60px;
+    height: 100%;
+    background: #fff;
+}
+.music_voice_bar .music_voice_dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    position: absolute;
+    top: -3px;
+    left: 60px;
+}
+
+/*背景*/
+.mask_bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("../images/lnj.jpg") no-repeat 0 0;
+    background-size: cover;
+    z-index: -2;
+    filter: blur(100px);
+}
+/*灰色蒙版*/
+.mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: -1;
+}
+
+._mCS_1 .mCSB_scrollTools .mCSB_dragger_bar{ width: 8px; }
